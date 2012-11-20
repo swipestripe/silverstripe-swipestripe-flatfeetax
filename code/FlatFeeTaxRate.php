@@ -143,6 +143,11 @@ class FlatFeeTaxRate_Admin extends ShopAdmin {
     'ShopConfig/Tax' => 'TaxSettings'
   );
 
+  public function init() {
+		parent::init();
+		$this->modelClass = 'ShopConfig';
+	}
+
   public function Breadcrumbs($unlinked = false) {
 
     $request = $this->getRequest();
