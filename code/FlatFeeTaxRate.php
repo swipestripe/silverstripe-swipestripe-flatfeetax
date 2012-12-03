@@ -2,11 +2,6 @@
 /**
  * Tax rates that can be set in {@link SiteConfig}. Several flat rates can be set 
  * for any supported shipping country.
- * 
- * @author Frank Mullenger <frankmullenger@gmail.com>
- * @copyright Copyright (c) 2011, Frank Mullenger
- * @package swipestripe
- * @subpackage shipping
  */
 class FlatFeeTaxRate extends DataObject {
   
@@ -23,8 +18,6 @@ class FlatFeeTaxRate extends DataObject {
 	
 	/**
 	 * Tax rates are associated with SiteConfigs.
-	 * 
-	 * TODO The CTF in SiteConfig does not save the SiteConfig ID correctly so this is moot
 	 * 
 	 * @var unknown_type
 	 */
@@ -113,11 +106,6 @@ class FlatFeeTaxRate extends DataObject {
 
 /**
  * So that {@link FlatFeeTaxRate}s can be created in {@link SiteConfig}.
- * 
- * @author Frank Mullenger <frankmullenger@gmail.com>
- * @copyright Copyright (c) 2011, Frank Mullenger
- * @package swipestripe
- * @subpackage shipping
  */
 class FlatFeeTaxRate_Extension extends DataExtension {
 

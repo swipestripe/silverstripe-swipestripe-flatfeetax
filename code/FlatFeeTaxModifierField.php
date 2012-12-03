@@ -1,11 +1,6 @@
 <?php
 /**
  * Form field that represents {@link FlatFeeTaxRate}s in the Checkout form.
- * 
- * @author Frank Mullenger <frankmullenger@gmail.com>
- * @copyright Copyright (c) 2011, Frank Mullenger
- * @package swipestripe
- * @subpackage shipping
  */
 class FlatFeeTaxModifierField extends ModifierHiddenField {
 	
