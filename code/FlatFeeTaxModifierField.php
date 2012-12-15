@@ -2,7 +2,7 @@
 /**
  * Form field that represents {@link FlatFeeTaxRate}s in the Checkout form.
  */
-class FlatFeeTaxModifierField extends ModifierHiddenField {
+class FlatFeeTaxModifierField extends ModificationField_Hidden {
 	
   /**
    * The amount this field represents e.g: 15% * order subtotal
@@ -17,7 +17,7 @@ class FlatFeeTaxModifierField extends ModifierHiddenField {
    * @see FormField::FieldHolder()
    * @return String
    */
-  function FieldHolder() {
+  function FieldHolder($properties = array()) {
     Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
     Requirements::javascript('swipestripe-flatfeetax/javascript/FlatFeeTaxModifierField.js');
     return $this->renderWith($this->template);
@@ -45,8 +45,9 @@ class FlatFeeTaxModifierField extends ModifierHiddenField {
 
 class FlatFeeTaxModifierField_Extension extends Extension {
 
-  public function updateOrderForm($form) {
+  public function updateFields($fields) {
     Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+    Requirements::javascript(THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
     Requirements::javascript('swipestripe-flatfeetax/javascript/FlatFeeTaxModifierField.js');
   }
 }
