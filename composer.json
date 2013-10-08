@@ -1,10 +1,10 @@
 {
-	"name": "swipestripe/swipestripe-flatfeeshipping",
-	"description": "Flat fee shipping support in SwipeStripe",
+	"name": "swipestripe/swipestripe-flatfeetax",
+	"description": "Flat fee tax support in SwipeStripe",
 	"homepage": "http://swipestripe.com",
 	"license": "BSD-3-Clause",
 	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "ecommerce", "e-commerce", "shop", "swipestripe", "swipe stripe", "shipping"],
+	"keywords": ["silverstripe", "ecommerce", "e-commerce", "shop", "swipestripe", "swipe stripe", "tax"],
 	"authors": [
 		{
 			"name": "Frank Mullenger",
@@ -18,7 +18,7 @@
 		"swipestripe/swipestripe": "2.1.*",
 		"swipestripe/swipestripe-addresses": "2.1.*"
 	},
-	"support": 
+	"support":
 	{
 		"email": "info@swipestripe.com",
 		"irc": "irc://irc.freenode.org/silverstripe",
