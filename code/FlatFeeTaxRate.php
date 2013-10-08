@@ -10,7 +10,7 @@ class FlatFeeTaxRate extends DataObject {
 	 * 
 	 * @var Array
 	 */
-	public static $db = array(
+	private static $db = array(
 		'Title' => 'Varchar',
 		'Description' => 'Varchar',
 		'Rate' => 'Decimal(18,2)'
@@ -21,12 +21,12 @@ class FlatFeeTaxRate extends DataObject {
 	 * 
 	 * @var unknown_type
 	 */
-	static $has_one = array(
+	private static $has_one = array(
 		'ShopConfig' => 'ShopConfig',
 		'Country' => 'Country_Shipping'
 	);
 
-	static $summary_fields = array(
+	private static $summary_fields = array(
 		'Title' => 'Title',
 		'Description' => 'Description',
 		'SummaryOfRate' => 'Rate',
@@ -122,11 +122,19 @@ class FlatFeeTaxRate_Extension extends DataExtension {
 
 class FlatFeeTaxRate_Admin extends ShopAdmin {
 
-	static $url_rule = 'ShopConfig/Tax';
-	static $url_priority = 120;
-	static $menu_title = 'Shop Tax Rates';
+	private static $tree_class = 'ShopConfig';
+	
+	private static $allowed_actions = array(
+		'TaxSettings',
+		'TaxSettingsForm',
+		'saveTaxSettings'
+	);
 
-	public static $url_handlers = array(
+	private static $url_rule = 'ShopConfig/Tax';
+	protected static $url_priority = 120;
+	private static $menu_title = 'Shop Tax Rates';
+
+	private static $url_handlers = array(
 		'ShopConfig/Tax/TaxSettingsForm' => 'TaxSettingsForm',
 		'ShopConfig/Tax' => 'TaxSettings'
 	);

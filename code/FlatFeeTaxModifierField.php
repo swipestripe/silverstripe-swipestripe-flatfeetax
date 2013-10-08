@@ -17,7 +17,7 @@ class FlatFeeTaxModifierField extends ModificationField_Hidden {
 	 * @see FormField::FieldHolder()
 	 * @return String
 	 */
-	function FieldHolder($properties = array()) {
+	public function FieldHolder($properties = array()) {
 		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 		Requirements::javascript('swipestripe-flatfeetax/javascript/FlatFeeTaxModifierField.js');
 		return $this->renderWith($this->template);
@@ -28,7 +28,7 @@ class FlatFeeTaxModifierField extends ModificationField_Hidden {
 	 * 
 	 * @param Money $amount
 	 */
-	function setAmount(Money $amount) {
+	public function setAmount(Money $amount) {
 		$this->amount = $amount;
 		return $this;
 	}
@@ -38,7 +38,7 @@ class FlatFeeTaxModifierField extends ModificationField_Hidden {
 	 * 
 	 * @return String
 	 */
-	function Description() {
+	public function Description() {
 		return $this->amount->Nice();
 	}
 }

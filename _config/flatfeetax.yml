@@ -1,0 +1,10 @@
+---
+name: SwipeStripe Flat Fee Tax
+---
+
+ShopConfig:
+  extensions: 
+    - 'FlatFeeTaxRate_Extension'
+OrderForm:
+  extensions: 
+    - 'FlatFeeTaxModifierField_Extension'

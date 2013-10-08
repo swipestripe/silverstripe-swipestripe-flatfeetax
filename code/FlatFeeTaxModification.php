@@ -2,11 +2,11 @@
 
 class FlatFeeTaxModification extends Modification {
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'FlatFeeTaxRate' => 'FlatFeeTaxRate'
 	);
 
-	public static $defaults = array(
+	private static $defaults = array(
 		'SubTotalModifier' => false,
 		'SortOrder' => 150
 	);
